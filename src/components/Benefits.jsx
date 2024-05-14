@@ -16,10 +16,9 @@ const Benefits = () => {
         <div className="flex flex-wrap gap-10 mb-10 justify-center">
           {benefits.map((item) => (
             <div
-              className="block relative p-0.5 bg-no-repeat md:max-w-[24rem]"
+              className="block relative p-0.5 bg-no-repeat md:max-w-[24rem] bg-conic-gradient2 hover:bg-conic-gradient transition-all"
               style={{
-                backgroundImage: `url(${item.backgroundUrl})`,
-                backgroundSize: "100% 100%",
+                clipPath: "url(#benefits)",
               }}
               key={item.id}
             >
@@ -42,7 +41,7 @@ const Benefits = () => {
 
               {item.light && <GradientLight />}
               <div
-                className="absolute inset-0.5 bg-n-8/10 hover:bg-n-8"
+                className="absolute inset-0.5 bg-n-8 hover:bg-n-8 hover:z-1"
                 style={{ clipPath: "url(#benefits" }}
               >
                 <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-20">
